@@ -261,7 +261,6 @@
 
         <section id="portal" class="min-h-screen flex items-center justify-center relative">
             <div class="text-center px-6">
-                <!-- Retângulo removido conforme solicitado -->
                 <h1 class="text-8xl md:text-[160px] font-serif font-bold leading-[0.85] mb-12 hero-reveal crimson-glow tracking-tighter">
                     SR <br> <span class="italic gold-text drop-shadow-2xl">GUII 1943</span>
                 </h1>
@@ -297,7 +296,8 @@
         </section>
 
         <section id="conquistas" class="py-32 px-8 max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-            <div onclick="playClanVideo('assets/videos/curso1')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
+            <!-- Novos caminhos ajustados conforme solicitado -->
+            <div onclick="playClanVideo('wireddacademy1943/assets/videos/curso1.mp4')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
                 <div class="mb-10 w-16 h-16 border border-amber-500/20 flex items-center justify-center rounded-full group-hover:bg-amber-500/10 transition-colors">
                     <div class="habblet-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/wf_trg_walks_on_furni_icon.png');"></div>
                 </div>
@@ -305,7 +305,7 @@
                 <p class="text-white/40 leading-relaxed font-light">Clique aqui para saber por completo como funciona os Wireds Ativadores.</p>
             </div>
             
-            <div onclick="playClanVideo('wiredacademy1943/assets/videos/curso2')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
+            <div onclick="playClanVideo('wireddacademy1943/assets/videos/curso2.mp4')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
                 <div class="mb-10 w-16 h-16 border border-amber-500/20 flex items-center justify-center rounded-full group-hover:bg-amber-500/10 transition-colors">
                     <div class="habblet-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/wf_act_teleport_to_icon.png');"></div>
                 </div>
@@ -313,7 +313,7 @@
                 <p class="text-white/40 leading-relaxed font-light">Clique aqui para saber por completo como funciona os Wireds de Efeito.</p>
             </div>
 
-            <div onclick="playClanVideo('wiredacademy1943/assets/videos/curso3')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
+            <div onclick="playClanVideo('wireddacademy1943/assets/videos/curso3.mp4')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
                 <div class="mb-10 w-16 h-16 border border-amber-500/20 flex items-center justify-center rounded-full group-hover:bg-amber-500/10 transition-colors">
                     <div class="habblet-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/wf_slc_furni_area_icon.png');"></div>
                 </div>
@@ -337,10 +337,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script>
-        // Chave de API vazia conforme o workflow do ambiente
         const apiKey = ""; 
 
-        // --- IA CONSELHO (GEMINI 2.5 FLASH) ---
         async function fetchGemini(query, retries = 5) {
             const systemPrompt = "És o oráculo do clã Los Senhores no Habblet. Responde sempre em português de Portugal. Teu tom é místico, épico e autoritário. IMPORTANTE: Sê extremamente breve. Responde em no máximo duas frases curtas. Nunca saias do personagem.";
             const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
@@ -385,7 +383,6 @@
             };
         }
 
-        // --- INTEGRAÇÃO DA RÁDIO HUNTER FM ---
         const audioBtn = document.getElementById('toggle-audio');
         const bgRadio = document.getElementById('bg-radio');
         const statusText = document.getElementById('radio-status-text');
@@ -414,7 +411,6 @@
             }
         };
 
-        // --- 3D BACKGROUND ---
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 1500);
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg-canvas'), antialias: true, alpha: true });
@@ -509,5 +505,4 @@
         };
     </script>
 </body>
-
 </html>

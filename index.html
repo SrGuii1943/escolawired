@@ -192,6 +192,16 @@
             background-size: contain;
             filter: drop-shadow(0 0 5px var(--gold));
         }
+        
+        .rare-card-icon {
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 10px var(--gold));
+        }
     </style>
 </head>
 <body>
@@ -245,7 +255,7 @@
             </div>
             <nav class="hidden lg:flex gap-16 text-[10px] uppercase tracking-[0.6em] font-bold text-white/40">
                 <a href="#portal" class="nav-link hover:text-white transition-all">Portal</a>
-                <a href="#conselho" class="nav-link hover:text-white transition-all">Conselho</a>
+                <a href="#loja" class="nav-link hover:text-white transition-all">Lojinha</a>
                 <a href="#conquistas" class="nav-link hover:text-white transition-all">WIRED ACADEMY</a>
             </nav>
             <div class="flex items-center gap-10">
@@ -276,27 +286,74 @@
             </div>
         </section>
 
-        <section id="conselho" class="min-h-screen flex items-center justify-center py-32">
-            <div class="max-w-5xl w-full px-8">
-                <div class="glass p-16 md:p-24 relative" onmousemove="updateMousePos(event, this)">
-                    <div class="relative z-10 text-center">
-                        <i class="fa-solid fa-scroll text-amber-500/40 text-5xl mb-10"></i>
-                        <h3 class="text-5xl md:text-6xl font-serif mb-12 gold-text uppercase tracking-widest">O Conselho de Senhor Gui</h3>
-                        <div class="flex flex-col md:flex-row gap-6 mb-12">
-                            <input type="text" id="ai-input" placeholder="O que desejas saber, nobre?" 
-                                   class="flex-1 bg-white/5 border-b border-white/10 px-8 py-6 outline-none focus:border-amber-500/60 transition-all text-white text-xl font-light italic">
-                            <button id="ask-button" class="bg-red-900/20 hover:bg-red-800/40 border border-red-700/50 text-red-500 font-bold px-12 py-6 transition-all uppercase text-xs tracking-[0.3em]">Consultar</button>
-                        </div>
-                        <div id="response-box" class="hidden text-left bg-black/60 p-12 border border-white/5 rounded-2xl backdrop-blur-md">
-                            <p id="ai-response" class="text-white/90 text-xl leading-relaxed font-serif"></p>
-                        </div>
-                    </div>
+        <!-- SEÇÃO LOJINHA DE RAROS -->
+        <section id="loja" class="min-h-screen py-32 flex flex-col items-center justify-center bg-black/30">
+            <div class="text-center mb-16">
+                <i class="fa-solid fa-gem text-amber-500/40 text-5xl mb-6"></i>
+                <h3 class="text-5xl md:text-6xl font-serif gold-text uppercase tracking-widest">Lojinha de Raros</h3>
+                <p class="text-white/40 tracking-[0.3em] uppercase text-xs mt-4">Coleção Exclusiva Sr Guii</p>
+            </div>
+            
+            <div class="max-w-6xl w-full px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Vermelho -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/hbt_sportscar2_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-red-500 text-xs font-black tracking-widest mb-4">VERMELHO</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
                 </div>
+
+                <!-- Amarelo -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/hbt_sportscar_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-yellow-500 text-xs font-black tracking-widest mb-4">AMARELO</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
+                </div>
+
+                <!-- Preto -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/habblet_sportcar_02_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-slate-400 text-xs font-black tracking-widest mb-4">PRETO</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
+                </div>
+
+                <!-- Azul -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/hbt_sportscar3_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-blue-500 text-xs font-black tracking-widest mb-4">AZUL</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
+                </div>
+
+                <!-- Rosa -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/habblet_sportcar_03_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-pink-400 text-xs font-black tracking-widest mb-4">ROSA</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
+                </div>
+
+                <!-- Branco -->
+                <div class="glass p-8 flex flex-col items-center text-center group" onmousemove="updateMousePos(event, this)">
+                    <div class="rare-card-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/habblet_sportcar_01_icon.png');"></div>
+                    <h4 class="text-lg font-bold text-white mb-2 tracking-widest">CARRO ESPORTIVO</h4>
+                    <span class="text-white text-xs font-black tracking-widest mb-4">BRANCO</span>
+                    <p class="text-2xl gold-text font-serif mb-6 italic">R$ 5,00</p>
+                    <a href="https://wa.me/5519991160218?text=Ol%C3%A1%20vim%20pelo%20seu%20site" target="_blank" class="w-full py-3 bg-white/5 border border-white/10 text-[10px] tracking-[0.4em] uppercase font-black hover:bg-amber-500/20 hover:border-amber-500/50 transition-all">Comprar Agora</a>
+                </div>
+
             </div>
         </section>
 
         <section id="conquistas" class="py-32 px-8 max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-            <!-- Caminhos relativos ajustados para funcionamento no GitHub Pages -->
             <div onclick="playClanVideo('assets/videos/curso1.mp4')" onmousemove="updateMousePos(event, this)" class="glass p-16 cursor-pointer group">
                 <div class="mb-10 w-16 h-16 border border-amber-500/20 flex items-center justify-center rounded-full group-hover:bg-amber-500/10 transition-colors">
                     <div class="habblet-icon" style="background-image: url('https://images.habblet.city/library/hof_furni/icons/wf_trg_walks_on_furni_icon.png');"></div>
@@ -337,52 +394,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script>
-        const apiKey = ""; 
-
-        async function fetchGemini(query, retries = 5) {
-            const systemPrompt = "És o oráculo do clã Los Senhores no Habblet. Responde sempre em português de Portugal. Teu tom é místico, épico e autoritário. IMPORTANTE: Sê extremamente breve. Responde em no máximo duas frases curtas. Nunca saias do personagem.";
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-            
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            contents: [{ parts: [{ text: query }] }],
-                            systemInstruction: { parts: [{ text: systemPrompt }] }
-                        })
-                    });
-                    
-                    if (!response.ok) throw new Error('Falha na API');
-                    const data = await response.json();
-                    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                    if (!text) throw new Error('Sem resposta');
-                    return text;
-                } catch (e) {
-                    if (i === retries - 1) return "As brumas do tempo estão demasiado densas agora. O Conselho permanece em silêncio.";
-                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
-                }
-            }
-        }
-
-        const askBtn = document.getElementById('ask-button');
-        if(askBtn) {
-            askBtn.onclick = async () => {
-                const input = document.getElementById('ai-input');
-                const box = document.getElementById('response-box');
-                const resp = document.getElementById('ai-response');
-                if(!input.value.trim()) return;
-                
-                box.classList.remove('hidden');
-                resp.innerText = "O Conselho está a consultar os astros...";
-                
-                const reply = await fetchGemini(input.value);
-                resp.innerText = reply;
-                input.value = "";
-            };
-        }
-
         const audioBtn = document.getElementById('toggle-audio');
         const bgRadio = document.getElementById('bg-radio');
         const statusText = document.getElementById('radio-status-text');
